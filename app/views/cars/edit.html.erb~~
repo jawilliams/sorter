@@ -1,0 +1,2 @@
+<h2> Edit Car </h2>
+<%= render 'form %>

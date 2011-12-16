@@ -1,0 +1,16 @@
+<h2> Car Detail </h2>
+
+ID:<%= @car.id %><br />
+Color:<%= @car.color %><br />
+Make:<%= @car.make %><br />
+Model:<%= @car.model %><br />
+Year:<%= @car.year %><br />
+<br />
+<br />
+<h3>Drivers:</h3>
+<%= render @car.drivers %>
+<h2>Add a driver</h2>
+<%= render "drivers/form" %>
+<%=link_to 'Index', cars_path%>
+<%=link_to 'Edit', edit_car_path %>
+<%= link_to 'Delete', car_path(@car, :destroy => true), :confirm =>"Are you sure?", :method => :delete %>

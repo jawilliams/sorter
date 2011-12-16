@@ -1,0 +1,24 @@
+<h2> Cars Listing </h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Color</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @cars.each do |car| %>
+    <tr>
+      <td><%= link_to car.id, car %></td>
+      <td><%= car.color %></td>
+      <td><%= car.make %></td>
+      <td><%= car.model %></td>
+      <td><%= car.year %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to 'New', new_car_path %>

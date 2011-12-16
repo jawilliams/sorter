@@ -1,0 +1,4 @@
+Name: <%= driver.name %><br />
+Team: <%= driver.team %><br />
+<%-# link_to 'Details', [@cars_driver_path, @driver] %>
+<br />

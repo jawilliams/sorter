@@ -1,0 +1,3 @@
+<h2> Driver Detail </h2>
+Name:<%= driver.name %><br />
+Team:<%= driver.team %><br />

@@ -1,0 +1,7 @@
+<%= form_for([@car, @car.drivers.build]) do |f|%>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+  <%= f.label :team %><br />
+  <%= f.text_field :team %><br />
+  <%= f.submit %>
+<% end %>
