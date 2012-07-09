@@ -1,5 +1,7 @@
 class DriversController < ApplicationController
   def index
+    @car = Car.find(params[:car_id])
+    @driver = @car.drivers.find(params[:driver])
   end
   def show
     @car = Car.find(params[:car_id])
@@ -7,7 +9,7 @@ class DriversController < ApplicationController
   end
   def edit
     @car = Car.find(params[:car_id])
-    @driver = @car.drivers.find(params[:driver])
+    @driver = @car.drivers.find(params[:id])
   end
   #def update
   #end

@@ -1,4 +1,12 @@
-Name: <%= driver.name %><br />
-Team: <%= driver.team %><br />
-<%= link_to 'Details', [@car_drivers_path, @driver] %>
-<br />
+<h2> Driver Detail </h2>
+#-Name:<%= @driver.name %><br />
+#-Team:<%= @driver.team %><br />
+
+<%#- link_to 'Edit', edit_cars_driver_path %>
+<%= form_for([@car, @car.drivers.build]) do |f|%>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+  <%= f.label :team %><br />
+  <%= f.text_field :team %><br />
+  <%= f.submit %>
+<% end %>
